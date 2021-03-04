@@ -8,7 +8,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.List;
 
-
 public class HibernateRun {
     public static void main(String[] args) {
         final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
@@ -27,7 +26,8 @@ public class HibernateRun {
             for (Item it : list) {
                 System.out.println(it);
             }
-        }  catch (Exception e) {
+            sf.close();
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             StandardServiceRegistryBuilder.destroy(registry);
