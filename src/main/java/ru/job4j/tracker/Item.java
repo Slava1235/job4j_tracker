@@ -24,9 +24,6 @@ public class Item {
         this.description = description;
     }
 
-
-
-
     public int getId() {
         return id;
     }
@@ -74,11 +71,9 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", created=" + created +
-                ", description='" + description + '\'' +
-                '}';
+        return  id +
+                " " + name + '\'' +
+                " " + created +
+                " " + description + '\'';
     }
 }
